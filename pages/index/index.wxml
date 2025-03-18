@@ -5,4 +5,17 @@
     <view class="subtitle">我的第一个微信小程序</view>
     <button type="primary">点击我</button>
   </view>
+  <view class="container">
+    <!-- 原有内容 -->
+    
+    <!-- 新增计数器功能 -->
+    <view class="counter-container">
+      <text class="counter-title">计数器</text>
+      <view class="counter-controls">
+        <button class="counter-btn" bindtap="decreaseCount">-</button>
+        <text class="counter-number">{{count}}</text>
+        <button class="counter-btn" bindtap="increaseCount">+</button>
+      </view>
+    </view>
+  </view>
 </scroll-view>

@@ -3,7 +3,8 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 
 Page({
   data: {
-    message: '我的第一个微信小程序'
+    message: '我的第一个微信小程序',
+    count: 0 // 新增计数器数据
   },
   onLoad: function() {
     console.log('页面加载完成');
@@ -14,5 +15,19 @@ Page({
       icon: 'success',
       duration: 2000
     });
+  },
+  increaseCount: function() {
+    this.setData({
+      count: this.data.count + 1
+    })
+  },
+
+  decreaseCount: function() {
+    // 防止计数为负
+    if (this.data.count > 0) {
+      this.setData({
+        count: this.data.count - 1
+      })
+    }
   }
 });

@@ -20,3 +20,47 @@
   color: #666;
   margin-bottom: 30px;
 }
+
+.counter-container {
+  margin-top: 50rpx;
+  background: #f8f8f8;
+  padding: 30rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.1);
+  width: 80%;
+}
+
+.counter-title {
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: block;
+  text-align: center;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter-btn {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: white;
+  background-color: #1aad19;
+  padding: 0;
+  line-height: 80rpx;
+}
+
+.counter-number {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin: 0 30rpx;
+  color: #333;
+}
