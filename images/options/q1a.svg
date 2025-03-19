@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 750" width="750" height="750">
+  <!-- 背景 -->
+  <rect width="750" height="750" fill="#F9FBE7"/>
+  
+  <!-- 标题背景 -->
+  <rect x="100" y="50" width="550" height="80" rx="15" fill="#FF9800"/>
+  <text x="375" y="100" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">选项 A</text>
+  
+  <!-- 主要场景：一群孩子一起玩耍 -->
+  <g>
+    <!-- 圆形背景 -->
+    <circle cx="375" cy="350" r="200" fill="#BBDEFB" opacity="0.6"/>
+    
+    <!-- 孩子们站成一个圈 -->
+    <!-- 孩子1 -->
+    <circle cx="275" cy="300" r="40" fill="#FF9999"/> <!-- 头 -->
+    <rect x="260" y="340" width="30" height="60" fill="#FFCCCC" rx="10"/> <!-- 身体 -->
+    <circle cx="260" cy="290" r="8" fill="white"/> <!-- 左眼 -->
+    <circle cx="290" cy="290" r="8" fill="white"/> <!-- 右眼 -->
+    <circle cx="260" cy="290" r="3" fill="black"/> <!-- 左眼珠 -->
+    <circle cx="290" cy="290" r="3" fill="black"/> <!-- 右眼珠 -->
+    <path d="M260 315 Q275 330 290 315" stroke="#FF6666" stroke-width="3" fill="none"/> <!-- 笑容 -->
+    
+    <!-- 孩子2 -->
+    <circle cx="375" cy="250" r="40" fill="#99CCFF"/>
+    <rect x="360" y="290" width="30" height="60" fill="#CCE6FF" rx="10"/>
+    <circle cx="360" cy="240" r="8" fill="white"/>
+    <circle cx="390" cy="240" r="8" fill="white"/>
+    <circle cx="360" cy="240" r="3" fill="black"/>
+    <circle cx="390" cy="240" r="3" fill="black"/>
+    <path d="M360 265 Q375 280 390 265" stroke="#6699CC" stroke-width="3" fill="none"/>
+    
+    <!-- 孩子3 -->
+    <circle cx="475" cy="300" r="40" fill="#99FF99"/>
+    <rect x="460" y="340" width="30" height="60" fill="#CCFFCC" rx="10"/>
+    <circle cx="460" cy="290" r="8" fill="white"/>
+    <circle cx="490" cy="290" r="8" fill="white"/>
+    <circle cx="460" cy="290" r="3" fill="black"/>
+    <circle cx="490" cy="290" r="3" fill="black"/>
+    <path d="M460 315 Q475 330 490 315" stroke="#66CC66" stroke-width="3" fill="none"/>
+    
+    <!-- 孩子4 -->
+    <circle cx="325" cy="400" r="40" fill="#FFCC99"/>
+    <rect x="310" y="440" width="30" height="60" fill="#FFE6CC" rx="10"/>
+    <circle cx="310" cy="390" r="8" fill="white"/>
+    <circle cx="340" cy="390" r="8" fill="white"/>
+    <circle cx="310" cy="390" r="3" fill="black"/>
+    <circle cx="340" cy="390" r="3" fill="black"/>
+    <path d="M310 415 Q325 430 340 415" stroke="#FFAA66" stroke-width="3" fill="none"/>
+    
+    <!-- 孩子5 -->
+    <circle cx="425" cy="400" r="40" fill="#CC99FF"/>
+    <rect x="410" y="440" width="30" height="60" fill="#E6CCFF" rx="10"/>
+    <circle cx="410" cy="390" r="8" fill="white"/>
+    <circle cx="440" cy="390" r="8" fill="white"/>
+    <circle cx="410" cy="390" r="3" fill="black"/>
+    <circle cx="440" cy="390" r="3" fill="black"/>
+    <path d="M410 415 Q425 430 440 415" stroke="#9966CC" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- 说明文字 -->
+  <rect x="150" y="550" width="450" height="100" rx="15" fill="white" stroke="#FF9800" stroke-width="4"/>
+  <text x="375" y="600" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">我喜欢和很多朋友一起玩耍</text>
+  <text x="375" y="630" font-family="Arial, sans-serif" font-size="20" fill="#666666" text-anchor="middle">充满欢乐和热闹的氛围让我觉得开心</text>
+  
+  <!-- 装饰元素 -->
+  <g>
+    <!-- 五角星 -->
+    <path d="M100,100 L120,150 L80,120 L120,120 L80,150 Z" fill="#FFD700" opacity="0.7"/>
+    <path d="M650,100 L670,150 L630,120 L670,120 L630,150 Z" fill="#FFD700" opacity="0.7"/>
+    <path d="M100,500 L120,550 L80,520 L120,520 L80,550 Z" fill="#FFD700" opacity="0.7"/>
+    <path d="M650,500 L670,550 L630,520 L670,520 L630,550 Z" fill="#FFD700" opacity="0.7"/>
+  </g>
+</svg> 

@@ -1,0 +1,204 @@
+/* pages/test/test.wxss */
+.test-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #B3E5FC, #81D4FA);
+  padding: 40rpx 30rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 进度条 */
+.progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.progress {
+  width: 90%;
+  margin-bottom: 10rpx;
+}
+
+.progress-text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 问题卡片 */
+.question-card {
+  background-color: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 问题图片容器 */
+.question-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+  height: 40%;
+}
+
+.question-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 选项 */
+.options-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20rpx;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.option-item {
+  display: flex;
+  flex: 1;
+  background-color: #F5F5F5;
+  border-radius: 16rpx;
+  padding: 10rpx;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  height: 35vh;
+  position: relative;
+}
+
+.option-item.selected {
+  background-color: #6A3DE8;
+  transform: scale(1.02);
+  box-shadow: 0 4rpx 8rpx rgba(106, 61, 232, 0.3);
+}
+
+.option-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12rpx;
+}
+
+.option-item.selected .option-image {
+  opacity: 0.9;
+}
+
+/* 导航按钮 */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.nav-btn {
+  width: 45%;
+  height: 90rpx;
+  border-radius: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.prev-btn {
+  background: linear-gradient(to bottom, #9E9E9E, #757575); /* 灰色渐变 */
+  box-shadow: 0 6rpx 12rpx rgba(117, 117, 117, 0.3);
+}
+
+.next-btn {
+  background: linear-gradient(to bottom, #FF9800, #F57C00); /* 橙色渐变 */
+  box-shadow: 0 6rpx 12rpx rgba(245, 124, 0, 0.3);
+}
+
+.nav-btn.disabled {
+  opacity: 0.6;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.nav-btn:active:not(.disabled) {
+  transform: translateY(4rpx);
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.15);
+}
+
+/* 装饰元素 */
+.decoration {
+  position: absolute;
+  z-index: 1;
+}
+
+.star1 {
+  top: 100rpx;
+  right: 60rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="%23FFD700"/></svg>');
+  background-size: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+.star2 {
+  bottom: 180rpx;
+  left: 70rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="%23FFD700"/></svg>');
+  background-size: contain;
+  animation: float 4s ease-in-out infinite;
+}
+
+.bubble1 {
+  top: 200rpx;
+  left: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.bubble2 {
+  bottom: 120rpx;
+  right: 80rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} 

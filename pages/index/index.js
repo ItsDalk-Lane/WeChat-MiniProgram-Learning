@@ -3,31 +3,48 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 
 Page({
   data: {
-    message: '我的第一个微信小程序',
-    count: 0 // 新增计数器数据
+    // 初始状态
+    title: '性格小探险',
+    subtitle: '探索你的性格，发现你的闪光点'
   },
+  
   onLoad: function() {
-    console.log('页面加载完成');
+    console.log('性格小探险小程序已加载');
+    
+    // 显示欢迎动画效果
+    this.showWelcomeAnimation();
   },
-  onTap: function() {
+  
+  // 显示欢迎动画
+  showWelcomeAnimation: function() {
+    // 此处可以添加欢迎动画逻辑，如果需要
+  },
+  
+  // 开始探索按钮点击事件
+  onGuestMode: function() {
     wx.showToast({
-      title: '你点击了按钮!',
+      title: '开始性格探索!',
       icon: 'success',
-      duration: 2000
+      duration: 1500
+    });
+    
+    // 跳转到性格测试页面
+    wx.navigateTo({
+      url: '../test/test'
     });
   },
-  increaseCount: function() {
-    this.setData({
-      count: this.data.count + 1
-    })
-  },
-
-  decreaseCount: function() {
-    // 防止计数为负
-    if (this.data.count > 0) {
-      this.setData({
-        count: this.data.count - 1
-      })
-    }
+  
+  // 认识性格按钮点击事件
+  onStartExplore: function() {
+    wx.showToast({
+      title: '了解性格类型',
+      icon: 'success',
+      duration: 1500
+    });
+    
+    // 跳转到历史记录页面
+    wx.navigateTo({
+      url: '../history/history'
+    });
   }
 });

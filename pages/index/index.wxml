@@ -1,21 +1,53 @@
 <!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="title">Hello World!</view>
-    <view class="subtitle">我的第一个微信小程序</view>
-    <button type="primary">点击我</button>
+<view class="page-container">
+  <!-- 标题和副标题区域 -->
+  <view class="title-section">
+    <view class="title">性格小探险</view>
+    <view class="subtitle">探索你的性格，发现你的闪光点</view>
   </view>
-  <view class="container">
-    <!-- 原有内容 -->
-    
-    <!-- 新增计数器功能 -->
-    <view class="counter-container">
-      <text class="counter-title">计数器</text>
-      <view class="counter-controls">
-        <button class="counter-btn" bindtap="decreaseCount">-</button>
-        <text class="counter-number">{{count}}</text>
-        <button class="counter-btn" bindtap="increaseCount">+</button>
+  
+  <!-- 中间内容区域 -->
+  <view class="content">
+    <view class="character-container">
+      <!-- 卡通人物形象 -->
+      <view class="character">
+        <view class="avatar"></view>
+        <!-- 装饰元素 -->
+        <view class="decoration star1"></view>
+        <view class="decoration bubble1"></view>
+      </view>
+      
+      <!-- MBTI图示 -->
+      <view class="mbti-display">
+        <view class="mbti-card">
+          <view class="mbti-grid">
+            <view class="mbti-item">E</view>
+            <view class="mbti-item">I</view>
+            <view class="mbti-item">S</view>
+            <view class="mbti-item">N</view>
+            <view class="mbti-item">T</view>
+            <view class="mbti-item">F</view>
+            <view class="mbti-item">J</view>
+            <view class="mbti-item">P</view>
+          </view>
+        </view>
       </view>
     </view>
+    
+    <!-- 新添加的漫画测试信息 -->
+    <view class="comic-info">
+      <view class="comic-title">全新漫画式测试!</view>
+      <view class="comic-desc">24个有趣场景，生动形象地测试你的性格</view>
+      <view class="comic-desc">每个问题都有漫画展示，更易理解</view>
+    </view>
   </view>
-</scroll-view>
+  
+  <!-- 绿色草地区域 -->
+  <view class="grass-area"></view>
+  
+  <!-- 底部按钮区域 -->
+  <view class="footer-buttons">
+    <button class="btn guest-btn" bindtap="onGuestMode">开始探索</button>
+    <button class="btn start-btn" bindtap="onStartExplore">历史记录</button>
+  </view>
+</view>

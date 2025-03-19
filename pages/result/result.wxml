@@ -1,0 +1,140 @@
+<!--pages/result/result.wxml-->
+<view class="result-container">
+  <!-- 结果主体内容 -->
+  <view class="result-content" animation="{{animationData}}">
+    <!-- 结果类型 -->
+    <view class="result-type">
+      <text class="mbti-type">{{type}}</text>
+      <text class="type-title">{{personality.title}}</text>
+    </view>
+    
+    <!-- 卡通形象 -->
+    <view class="character-image">
+      <!-- 为不同类型设计了简单SVG图像，实际应用中可替换为精美图片 -->
+      <view class="avatar avatar-{{type}}"></view>
+    </view>
+    
+    <!-- 性格描述 -->
+    <view class="description-section">
+      <view class="section-title">你的性格特点</view>
+      <view class="section-content">{{personality.description}}</view>
+    </view>
+    
+    <!-- 优势闪光点 -->
+    <view class="strengths-section">
+      <view class="section-title">你的闪光点</view>
+      <view class="section-content">{{personality.strengths}}</view>
+    </view>
+    
+    <!-- 成长建议 -->
+    <view class="advice-section">
+      <view class="section-title">成长建议</view>
+      <view class="section-content">{{personality.advice}}</view>
+    </view>
+    
+    <!-- 分数分布 -->
+    <view class="scores-section" wx:if="{{scores}}">
+      <view class="section-title">性格维度指数</view>
+      <view class="dimension-bars">
+        <!-- E-I维度 -->
+        <view class="dimension-group">
+          <view class="dimension-labels">
+            <text class="dimension-label">E</text>
+            <text class="dimension-label">I</text>
+          </view>
+          <view class="dimension-bar">
+            <view class="bar-fill" style="width: {{scores.E/(scores.E+scores.I)*100}}%;"></view>
+          </view>
+          <view class="dimension-values">
+            <text class="dimension-value">{{scores.E}}</text>
+            <text class="dimension-value">{{scores.I}}</text>
+          </view>
+        </view>
+        
+        <!-- S-N维度 -->
+        <view class="dimension-group">
+          <view class="dimension-labels">
+            <text class="dimension-label">S</text>
+            <text class="dimension-label">N</text>
+          </view>
+          <view class="dimension-bar">
+            <view class="bar-fill" style="width: {{scores.S/(scores.S+scores.N)*100}}%;"></view>
+          </view>
+          <view class="dimension-values">
+            <text class="dimension-value">{{scores.S}}</text>
+            <text class="dimension-value">{{scores.N}}</text>
+          </view>
+        </view>
+        
+        <!-- T-F维度 -->
+        <view class="dimension-group">
+          <view class="dimension-labels">
+            <text class="dimension-label">T</text>
+            <text class="dimension-label">F</text>
+          </view>
+          <view class="dimension-bar">
+            <view class="bar-fill" style="width: {{scores.T/(scores.T+scores.F)*100}}%;"></view>
+          </view>
+          <view class="dimension-values">
+            <text class="dimension-value">{{scores.T}}</text>
+            <text class="dimension-value">{{scores.F}}</text>
+          </view>
+        </view>
+        
+        <!-- J-P维度 -->
+        <view class="dimension-group">
+          <view class="dimension-labels">
+            <text class="dimension-label">J</text>
+            <text class="dimension-label">P</text>
+          </view>
+          <view class="dimension-bar">
+            <view class="bar-fill" style="width: {{scores.J/(scores.J+scores.P)*100}}%;"></view>
+          </view>
+          <view class="dimension-values">
+            <text class="dimension-value">{{scores.J}}</text>
+            <text class="dimension-value">{{scores.P}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 操作按钮 -->
+    <view class="action-buttons">
+      <button class="action-btn retake-btn" bindtap="retakeTest">重新测试</button>
+      <button class="action-btn share-btn" bindtap="shareResult">分享结果</button>
+    </view>
+    
+    <button class="home-btn" bindtap="backToHome">返回首页</button>
+  </view>
+  
+  <!-- 分享画布（隐藏） -->
+  <canvas canvas-id="shareCanvas" style="width: 300px; height: 450px; position: absolute; left: -1000px; top: 0;"></canvas>
+  
+  <!-- 分享指引弹窗 -->
+  <view class="share-guide" wx:if="{{showShareGuide}}">
+    <view class="guide-content">
+      <view class="guide-header">
+        <text class="guide-title">分享你的结果</text>
+        <view class="close-btn" bindtap="closeShareGuide">×</view>
+      </view>
+      
+      <view class="guide-image">
+        <image wx:if="{{shareImagePath}}" src="{{shareImagePath}}" mode="aspectFit"></image>
+        <view wx:else class="loading-image">图片生成中...</view>
+      </view>
+      
+      <view class="guide-tips">
+        <text>长按图片保存到相册</text>
+        <text>或点击右上角分享给朋友</text>
+      </view>
+      
+      <button class="save-btn" bindtap="saveShareImage">保存图片</button>
+    </view>
+  </view>
+  
+  <!-- 装饰元素 -->
+  <view class="decoration star1"></view>
+  <view class="decoration star2"></view>
+  <view class="decoration bubble1"></view>
+  <view class="decoration bubble2"></view>
+</view> 

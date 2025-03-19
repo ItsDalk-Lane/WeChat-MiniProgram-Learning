@@ -1,0 +1,42 @@
+<!--pages/history/history.wxml-->
+<view class="history-container">
+  <view class="header">
+    <view class="title">历史记录</view>
+    <view class="clear-btn {{isEmpty ? 'disabled' : ''}}" bindtap="clearAllHistory">清空记录</view>
+  </view>
+  
+  <view class="history-list" wx:if="{{!isEmpty}}">
+    <block wx:for="{{historyList}}" wx:key="id">
+      <view class="history-item" bindtap="viewDetail" data-id="{{item.id}}" data-type="{{item.type}}">
+        <view class="item-info">
+          <view class="item-type">
+            <text class="mbti-type">{{item.type}}</text>
+            <text class="type-title">{{item.personality.title}}</text>
+          </view>
+          <view class="item-date">{{item.formattedDate}}</view>
+        </view>
+        <view class="item-desc">{{item.personality.description}}</view>
+        <view class="delete-btn" catchtap="deleteRecord" data-id="{{item.id}}">
+          <text>×</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <view class="empty-state" wx:else>
+    <view class="empty-image"></view>
+    <view class="empty-text">暂无测试记录</view>
+    <view class="empty-subtext">开始你的性格探险吧！</view>
+  </view>
+  
+  <view class="footer">
+    <button class="footer-btn home-btn" bindtap="backToHome">回到首页</button>
+    <button class="footer-btn start-btn" bindtap="startNewTest">开始测试</button>
+  </view>
+  
+  <!-- 装饰元素 -->
+  <view class="decoration star1"></view>
+  <view class="decoration star2"></view>
+  <view class="decoration bubble1"></view>
+  <view class="decoration bubble2"></view>
+</view> 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 750" width="750" height="750">
+  <!-- 背景 -->
+  <rect width="750" height="750" fill="#F9FBE7"/>
+  
+  <!-- 标题背景 -->
+  <rect x="100" y="50" width="550" height="80" rx="15" fill="#4A86E8"/>
+  <text x="375" y="100" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">选项 B</text>
+  
+  <!-- 主要场景：两个孩子安静聊天 -->
+  <g>
+    <!-- 圆形背景 -->
+    <circle cx="375" cy="350" r="200" fill="#E1F5FE" opacity="0.6"/>
+    
+    <!-- 教室角落或安静区域，有书桌 -->
+    <rect x="225" y="420" width="300" height="20" fill="#A5D6A7" rx="5"/> <!-- 桌面 -->
+    <rect x="235" y="440" width="20" height="60" fill="#81C784"/> <!-- 左桌腿 -->
+    <rect x="495" y="440" width="20" height="60" fill="#81C784"/> <!-- 右桌腿 -->
+    
+    <!-- 两个安静聊天的孩子 -->
+    <!-- 孩子1 -->
+    <circle cx="300" cy="350" r="50" fill="#99CCFF"/> <!-- 头 -->
+    <rect x="280" y="400" width="40" height="80" fill="#CCE6FF" rx="10"/> <!-- 身体 -->
+    <circle cx="280" cy="340" r="10" fill="white"/> <!-- 左眼 -->
+    <circle cx="320" cy="340" r="10" fill="white"/> <!-- 右眼 -->
+    <circle cx="280" cy="340" r="4" fill="black"/> <!-- 左眼珠 -->
+    <circle cx="320" cy="340" r="4" fill="black"/> <!-- 右眼珠 -->
+    <path d="M285 360 Q300 370 315 360" stroke="#6699CC" stroke-width="3" fill="none"/> <!-- 微笑 -->
+    
+    <!-- 孩子2 -->
+    <circle cx="450" cy="350" r="50" fill="#FFCC99"/>
+    <rect x="430" y="400" width="40" height="80" fill="#FFE6CC" rx="10"/>
+    <circle cx="430" cy="340" r="10" fill="white"/>
+    <circle cx="470" cy="340" r="10" fill="white"/>
+    <circle cx="430" cy="340" r="4" fill="black"/>
+    <circle cx="470" cy="340" r="4" fill="black"/>
+    <path d="M435 360 Q450 370 465 360" stroke="#FFAA66" stroke-width="3" fill="none"/>
+    
+    <!-- 对话气泡 -->
+    <path d="M350 280 L380 280 L380 260 L390 280 L415 280 L415 310 L385 310 L375 330 L375 310 L350 310 Z" fill="white" stroke="#333333" stroke-width="2"/>
+    
+    <!-- 书本在桌子上 -->
+    <rect x="260" y="400" width="30" height="20" fill="#FFF59D" stroke="#FBC02D" stroke-width="1"/> <!-- 书本1 -->
+    <rect x="460" y="400" width="30" height="20" fill="#EF9A9A" stroke="#E57373" stroke-width="1"/> <!-- 书本2 -->
+  </g>
+  
+  <!-- 说明文字 -->
+  <rect x="150" y="550" width="450" height="100" rx="15" fill="white" stroke="#4A86E8" stroke-width="4"/>
+  <text x="375" y="600" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">我喜欢和好朋友安静地聊天</text>
+  <text x="375" y="630" font-family="Arial, sans-serif" font-size="20" fill="#666666" text-anchor="middle">安静的环境让我感到舒适和放松</text>
+  
+  <!-- 装饰元素 -->
+  <g>
+    <!-- 装饰云朵 -->
+    <path d="M100,90 Q130,70 160,90 Q190,70 220,90 Q190,110 160,90 Q130,110 100,90 Z" fill="#E3F2FD" opacity="0.7"/>
+    <path d="M500,90 Q530,70 560,90 Q590,70 620,90 Q590,110 560,90 Q530,110 500,90 Z" fill="#E3F2FD" opacity="0.7"/>
+    <path d="M100,600 Q130,580 160,600 Q190,580 220,600 Q190,620 160,600 Q130,620 100,600 Z" fill="#E3F2FD" opacity="0.7"/>
+    <path d="M500,600 Q530,580 560,600 Q590,580 620,600 Q590,620 560,600 Q530,620 500,600 Z" fill="#E3F2FD" opacity="0.7"/>
+  </g>
+</svg> 

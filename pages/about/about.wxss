@@ -1,0 +1,245 @@
+/* pages/about/about.wxss */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #B3E5FC, #81D4FA);
+  padding: 30rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 头部区域 */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.back-btn {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.back-icon {
+  font-size: 36rpx;
+  color: #6A3DE8;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #6A3DE8;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 内容区域 */
+.content {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  overflow-y: auto;
+}
+
+/* Logo区域 */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 0;
+  margin-bottom: 30rpx;
+}
+
+.app-logo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 24rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%236A3DE8" rx="20"/><circle cx="50" cy="35" r="20" fill="white"/><circle cx="35" cy="30" r="4" fill="%236A3DE8"/><circle cx="65" cy="30" r="4" fill="%236A3DE8"/><path d="M35,45 Q50,55 65,45" stroke="%236A3DE8" fill="none" stroke-width="3"/><text x="20" y="80" font-family="Arial" font-size="16" font-weight="bold" fill="white">MBTI</text></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20rpx;
+  box-shadow: 0 6rpx 12rpx rgba(106, 61, 232, 0.3);
+}
+
+.app-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #6A3DE8;
+  margin-bottom: 10rpx;
+}
+
+.app-version {
+  font-size: 26rpx;
+  color: #9E9E9E;
+}
+
+/* 信息区域 */
+.info-section {
+  margin-bottom: 40rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #6A3DE8;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding-left: 24rpx;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8rpx;
+  height: 32rpx;
+  background-color: #FF9800;
+  border-radius: 4rpx;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.info-item {
+  background-color: #F5F5F5;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+
+.info-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.info-content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 版权信息 */
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 0;
+  gap: 10rpx;
+}
+
+.copyright text {
+  font-size: 24rpx;
+  color: #9E9E9E;
+  text-align: center;
+}
+
+/* 底部按钮 */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.footer-btn {
+  width: 45%;
+  height: 90rpx;
+  border-radius: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.home-btn {
+  background: linear-gradient(to bottom, #9E9E9E, #757575); /* 灰色渐变 */
+  box-shadow: 0 6rpx 12rpx rgba(117, 117, 117, 0.3);
+}
+
+.start-btn {
+  background: linear-gradient(to bottom, #FF9800, #F57C00); /* 橙色渐变 */
+  box-shadow: 0 6rpx 12rpx rgba(245, 124, 0, 0.3);
+}
+
+.footer-btn:active {
+  transform: translateY(4rpx);
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.15);
+}
+
+/* 装饰元素 */
+.decoration {
+  position: absolute;
+  z-index: 1;
+}
+
+.star1 {
+  top: 100rpx;
+  right: 60rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="%23FFD700"/></svg>');
+  background-size: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+.star2 {
+  bottom: 180rpx;
+  left: 70rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="%23FFD700"/></svg>');
+  background-size: contain;
+  animation: float 4s ease-in-out infinite;
+}
+
+.bubble1 {
+  top: 200rpx;
+  left: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.bubble2 {
+  bottom: 120rpx;
+  right: 80rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} 

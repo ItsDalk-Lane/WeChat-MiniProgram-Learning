@@ -1,0 +1,62 @@
+<!--pages/about/about.wxml-->
+<view class="about-container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <view class="title">关于小程序</view>
+  </view>
+  
+  <view class="content">
+    <!-- App Logo -->
+    <view class="logo-section">
+      <view class="app-logo"></view>
+      <view class="app-name">小小性格探险家</view>
+      <view class="app-version">版本 {{version}}</view>
+    </view>
+    
+    <!-- App Info -->
+    <view class="info-section">
+      <view class="section-title">应用介绍</view>
+      <view class="info-list">
+        <block wx:for="{{appInfo}}" wx:key="title">
+          <view class="info-item">
+            <view class="info-title">{{item.title}}</view>
+            <view class="info-content">{{item.content}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    
+    <!-- MBTI Info -->
+    <view class="info-section">
+      <view class="section-title">四个维度说明</view>
+      <view class="info-list">
+        <block wx:for="{{mbtiInfo}}" wx:key="dimension">
+          <view class="info-item">
+            <view class="info-title">{{item.dimension}}</view>
+            <view class="info-content">{{item.content}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    
+    <!-- Copyright Info -->
+    <view class="copyright">
+      <text>© 2023 小小性格探险家</text>
+      <text>本程序仅供学习和娱乐，不作为专业心理测评工具</text>
+    </view>
+  </view>
+  
+  <!-- Bottom Buttons -->
+  <view class="footer">
+    <button class="footer-btn home-btn" bindtap="goHome">返回首页</button>
+    <button class="footer-btn start-btn" bindtap="startTest">开始测试</button>
+  </view>
+  
+  <!-- Decorations -->
+  <view class="decoration star1"></view>
+  <view class="decoration star2"></view>
+  <view class="decoration bubble1"></view>
+  <view class="decoration bubble2"></view>
+</view> 
