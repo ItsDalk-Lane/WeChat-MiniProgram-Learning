@@ -1,17 +1,26 @@
 <!--pages/test/test.wxml-->
 <view class="test-container">
+  <!-- 卡通云朵装饰 -->
+  <view class="cloud cloud1"></view>
+  <view class="cloud cloud2"></view>
+  
   <!-- 顶部进度条 -->
   <view class="progress-container">
-    <progress class="progress" percent="{{(currentQuestion+1)/totalQuestions*100}}" stroke-width="8" activeColor="#6A3DE8" backgroundColor="#E0E0E0" />
+    <progress class="progress" percent="{{progressPercent}}" stroke-width="8" activeColor="#6A3DE8" backgroundColor="#E0E0E0" />
     <view class="progress-text">{{currentQuestion+1}}/{{totalQuestions}}</view>
   </view>
   
   <!-- 问题卡片 -->
   <view class="question-card" animation="{{animationData}}">
     <view class="card-inner">
-      <!-- 问题图片 -->
-      <view class="question-image-container">
-        <image class="question-image" src="{{questions[currentQuestion].questionImage}}" mode="aspectFit"></image>
+      <!-- 卡通形象 -->
+      <view class="character-container">
+        <view class="character {{selectedAnswers[currentQuestion] ? 'character-happy' : ''}}"></view>
+      </view>
+      
+      <!-- 问题气泡 -->
+      <view class="question-bubble">
+        <view class="question-text">{{questions[currentQuestion].question}}</view>
       </view>
       
       <!-- 选项 -->
@@ -20,14 +29,16 @@
         <view class="option-item {{selectedAnswers[currentQuestion] === 'A' ? 'selected' : ''}}" 
               bindtap="selectOption" 
               data-option="A">
-          <image class="option-image" src="{{questions[currentQuestion].optionAImage}}" mode="aspectFit"></image>
+          <view class="option-letter">A</view>
+          <view class="option-text">{{questions[currentQuestion].optionA}}</view>
         </view>
         
         <!-- 选项B -->
         <view class="option-item {{selectedAnswers[currentQuestion] === 'B' ? 'selected' : ''}}" 
               bindtap="selectOption" 
               data-option="B">
-          <image class="option-image" src="{{questions[currentQuestion].optionBImage}}" mode="aspectFit"></image>
+          <view class="option-letter">B</view>
+          <view class="option-text">{{questions[currentQuestion].optionB}}</view>
         </view>
       </view>
     </view>
@@ -38,12 +49,12 @@
     <button class="nav-btn prev-btn {{currentQuestion === 0 ? 'disabled' : ''}}" 
             bindtap="prevQuestion" 
             disabled="{{currentQuestion === 0}}">
-      上一题
+      <text class="btn-text">上一题</text>
     </button>
     <button class="nav-btn next-btn {{selectedAnswers[currentQuestion] === null ? 'disabled' : ''}}" 
             bindtap="nextQuestion" 
             disabled="{{selectedAnswers[currentQuestion] === null}}">
-      {{isLastQuestion ? '查看结果' : '下一题'}}
+      <text class="btn-text">{{isLastQuestion ? '查看结果' : '下一题'}}</text>
     </button>
   </view>
   
@@ -52,4 +63,6 @@
   <view class="decoration star2"></view>
   <view class="decoration bubble1"></view>
   <view class="decoration bubble2"></view>
+  <view class="decoration balloon"></view>
+  <view class="decoration rainbow"></view>
 </view> 

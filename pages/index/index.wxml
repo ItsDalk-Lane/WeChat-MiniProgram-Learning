@@ -34,13 +34,21 @@
       </view>
     </view>
     
-    <!-- 新添加的漫画测试信息 -->
-    <view class="comic-info">
-      <view class="comic-title">全新漫画式测试!</view>
-      <view class="comic-desc">24个有趣场景，生动形象地测试你的性格</view>
-      <view class="comic-desc">每个问题都有漫画展示，更易理解</view>
+    <!-- 卡通风格的介绍信息 -->
+    <view class="info-bubble">
+      <view class="bubble-title">欢迎小探险家!</view>
+      <view class="bubble-text">通过有趣的问题，探索你独特的性格特点</view>
+      <view class="bubble-text">准备好开始这段奇妙旅程了吗？</view>
     </view>
   </view>
+  
+  <!-- 彩虹装饰 -->
+  <view class="rainbow-decoration"></view>
+  
+  <!-- 气球装饰 -->
+  <view class="balloon balloon1"></view>
+  <view class="balloon balloon2"></view>
+  <view class="balloon balloon3"></view>
   
   <!-- 绿色草地区域 -->
   <view class="grass-area"></view>

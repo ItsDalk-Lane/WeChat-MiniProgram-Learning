@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: #B3E5FC; /* 淡蓝色背景 */
+  background: linear-gradient(to bottom, #B3E5FC, #81D4FA);
   position: relative;
   overflow: hidden;
 }
@@ -117,6 +117,89 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* 卡通对话气泡 */
+.info-bubble {
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 30rpx;
+  position: relative;
+  box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.1);
+  animation: pop-in 0.5s ease-out;
+  max-width: 90%;
+}
+
+.info-bubble:after {
+  content: '';
+  position: absolute;
+  top: -20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 20rpx 20rpx 20rpx;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.bubble-title {
+  font-size: 36rpx;
+  color: #6A3DE8;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.bubble-text {
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10rpx;
+  line-height: 1.5;
+}
+
+/* 装饰元素 */
+.rainbow-decoration {
+  position: absolute;
+  bottom: 200rpx;
+  left: -100rpx;
+  width: 500rpx;
+  height: 250rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250"><path d="M0,250 C125,100 375,100 500,250" stroke="%23FF5252" stroke-width="25" fill="none"/><path d="M0,250 C125,125 375,125 500,250" stroke="%23FFAB40" stroke-width="25" fill="none"/><path d="M0,250 C125,150 375,150 500,250" stroke="%23FFEB3B" stroke-width="25" fill="none"/><path d="M0,250 C125,175 375,175 500,250" stroke="%238BC34A" stroke-width="25" fill="none"/><path d="M0,250 C125,200 375,200 500,250" stroke="%234FC3F7" stroke-width="25" fill="none"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.balloon {
+  position: absolute;
+  width: 50rpx;
+  height: 70rpx;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.balloon1 {
+  top: 150rpx;
+  right: 80rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50,10 C20,10 20,50 40,80 C45,90 50,90 60,80 C80,50 80,10 50,10 Z" fill="%23FF4081"/><path d="M50,80 L47,110 L53,110 Z" fill="%23FF4081"/><path d="M47,110 L53,110 L50,120 Z" fill="%23FF4081"/></svg>');
+  animation: float 5s ease-in-out infinite;
+}
+
+.balloon2 {
+  top: 100rpx;
+  right: 150rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50,10 C20,10 20,50 40,80 C45,90 50,90 60,80 C80,50 80,10 50,10 Z" fill="%234CAF50"/><path d="M50,80 L47,110 L53,110 Z" fill="%234CAF50"/><path d="M47,110 L53,110 L50,120 Z" fill="%234CAF50"/></svg>');
+  animation: float 7s ease-in-out infinite;
+}
+
+.balloon3 {
+  top: 200rpx;
+  right: 50rpx;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50,10 C20,10 20,50 40,80 C45,90 50,90 60,80 C80,50 80,10 50,10 Z" fill="%23FFC107"/><path d="M50,80 L47,110 L53,110 Z" fill="%23FFC107"/><path d="M47,110 L53,110 L50,120 Z" fill="%23FFC107"/></svg>');
+  animation: float 6s ease-in-out infinite;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -126,6 +209,17 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -167,56 +261,6 @@
   color: #333;
   font-size: 38rpx;
   box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
-}
-
-/* 漫画测试信息 */
-.comic-info {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 24rpx;
-  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.1);
-  padding: 30rpx 40rpx;
-  margin-top: 20rpx;
-  margin-bottom: 30rpx;
-  width: 80%;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.comic-title {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: #FF6D00;
-  margin-bottom: 20rpx;
-  position: relative;
-  display: inline-block;
-}
-
-.comic-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8rpx;
-  left: 0;
-  width: 100%;
-  height: 4rpx;
-  background: linear-gradient(to right, transparent, #FF6D00, transparent);
-}
-
-.comic-desc {
-  font-size: 28rpx;
-  color: #333;
-  line-height: 1.5;
-  margin-bottom: 10rpx;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20rpx);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* 绿色草地区域 */
